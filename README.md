@@ -7,8 +7,8 @@ This project fine-tunes a Vision Transformer to classify Zalando’s Fashion-MNI
 | Name                   | URL                                                                                 |
 |------------------------|-------------------------------------------------------------------------------------|
 | Hugging Face Space     | [Granitagushi/vit-base-fashion demo](https://huggingface.co/spaces/Granitagushi/Clothing_Detector) |
-| Model Page             | [Granitagushi/vit-base-fashion](https://huggingface.co/Granitagushi/vit-base-fashion) |
-| Code                   | _(no public repository available)_                                                 |
+| Model Page             | [Granitagushi/vit-base-fashion](https://github.com/granitagushi/AI_Project_fashion) |
+| Code                   | [GitHub Repository](https://github.com/granitagushi/AI_Project_fashion)                                               |
 
 ## Labels
 10 clothing items from Zalando:
@@ -64,8 +64,7 @@ Details of training can be found at [Huggingface TensorBoard](https://huggingfac
 
 | Model/Method                                                         | TensorBoard Link                                      |
 |----------------------------------------------------------------------|------------------------------------------------------|
-| Transfer Learning with `google/vit-base-patch16-224` (without data augmentation) | runs/May08_21-55-49_cs-01jtrx85f3pnwfy8yvb89mmm2x                    |
-| Transfer Learning with `google/vit-base-patch16-224` (with data augmentation)  | runs/May08_21-55-49_cs-01jtrx85f3pnwfy8yvb89mmm2x                    |
+| Transfer Learning with `google/vit-base-patch16-224` (without data augmentation) | runs/May08_21-55-49_cs-01jtrx85f3pnwfy8yvb89mmm2x                    |                   |
 
 ![alt text](doc/eval.png)
 
@@ -79,4 +78,9 @@ Details of training can be found at [Huggingface TensorBoard](https://huggingfac
 
 
 ## References 
+
+### Sample Prediction
 ![Sample Prediction (Transfer Learning)](doc/sample_prediction_transferlearning.png)
+
+### Predictions made by our ne model
+![Predictions made by our new model(Transfer Learning)](doc/predictions_made_byournewmodel.png)
