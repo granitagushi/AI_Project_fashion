@@ -66,7 +66,7 @@ Details of training can be found at [Huggingface TensorBoard](https://huggingfac
 |----------------------------------------------------------------------|------------------------------------------------------|
 | Transfer Learning with `google/vit-base-patch16-224` (without data augmentation) | runs/May08_21-55-49_cs-01jtrx85f3pnwfy8yvb89mmm2x                    |                   |
 
-![alt text](doc/eval.png)
+![alt text](doc/eval_accuracy.png)
 
 
 ## Results
@@ -79,8 +79,8 @@ Details of training can be found at [Huggingface TensorBoard](https://huggingfac
 
 ## References 
 
-### Sample Prediction
+### Example images from dataset
 ![Sample Prediction (Transfer Learning)](doc/sample_prediction_transferlearning.png)
 
-### Predictions made by our ne model
+### Predictions made by our new model
 ![Predictions made by our new model(Transfer Learning)](doc/predictions_made_byournewmodel.png)

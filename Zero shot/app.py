@@ -29,7 +29,7 @@ def classify_clothing(image):
         "CLIP Zero-Shot Classification": clip_output
     }
 
-# 3) Beispiele nur, wenn die Dateien ins Repo wandern
+
 example_images = [
     ["example_images/jeans.jpg"],
     ["example_images/kleid.jpg"],
@@ -45,7 +45,7 @@ iface = gr.Interface(
     outputs=gr.JSON(label="Ergebnisse"),
     title="Fashion MNIST Klassifikation",
     description="Vergleiche dein ViT-Modell mit einem CLIP Zero-Shot-Modell.",
-    examples=example_images,    # <— nur, wenn Dateien wirklich da sind
+    examples=example_images,   
     cache_examples=False
 )
 
