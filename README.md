@@ -27,13 +27,13 @@ This project fine-tunes a Vision Transformer to classify Zalando’s Fashion-MNI
 
 ## Data Augmentation
 
-| Transformation                                            | Description                                                                             |
-|-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| `Convert to RGB`                                          | Convert grayscale images to RGB (no change if already 3-channel)                        |
-| `Resize to 224×224`                                       | Resize all images to height=224 and width=224                                           |
-| `Resample=2 (BILINEAR)`                                   | Use bilinear interpolation when resizing                                                 |
-| `Rescale factor=0.00392156862745098`                      | Scale pixel values from [0,255] to [0,1]                                                |
-| `Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5])`        | Subtract mean and divide by std for each channel                                        |
+| Transformation                                                  | Description                                                                                               |
+|-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| `Resize to 256×256`                                             | Resize all input images to height=256 and width=256                                                       |
+| `RandomResizedCrop(size=224, scale=(0.85, 1.0))`               | Randomly crop a 224×224 patch from the image, scaling the crop area between 85 % – 100 % of the original   |
+| `RandomHorizontalFlip(p=0.5)`                                   | Horizontally flip each image with 50 % probability                                                         |
+| `ColorJitter(brightness=0.2, contrast=0.2)`                     | Apply random adjustments to brightness (±20 %) and contrast (±20 %)                                       |
+| `RandomRotation(degrees=5)`                                     | Rotate the image randomly by up to ±5 degrees                                                              |
 
 
 ## Model Training
@@ -64,17 +64,17 @@ Details of training can be found at [Huggingface TensorBoard](https://huggingfac
 
 | Model/Method                                                         | TensorBoard Link                                      |
 |----------------------------------------------------------------------|------------------------------------------------------|
-| Transfer Learning with `google/vit-base-patch16-224` (without data augmentation) | runs/May08_21-55-49_cs-01jtrx85f3pnwfy8yvb89mmm2x                    |                   |
-
+| Transfer Learning with `google/vit-base-patch16-224` (without data augmentation) | runs/May12_20-06-38_cs-01jv30w57s3x5787jt7sj65b8z                    |                   |
+| Transfer Learning with `google/vit-base-patch16-224` (with data augmentation)  | runs/May31_21-14-43_cs-01jwm0rvrk5b2m7f3e2trkqfjc                    |
 ![alt text](doc/eval_accuracy.png)
 
 
 ## Results
-
-| Model/Method                                                      | Accuracy | Precision | Recall  |
-|-------------------------------------------------------------------|---------:|----------:|--------:|
-| Transfer learning (`vit-base-fashion`, no data augmentation)      |   0.9102 |      –    |     –   |
-| Zero-shot CLIP (`openai/clip-vit-large-patch14`)                  |   0.6097 |   0.5647  |  0.6097 |
+| Model/Method                                                         | Accuracy | Precision | Recall |
+|----------------------------------------------------------------------|----------|-----------|--------|
+| Transfer Learning with `google/vit-base-patch16-224` (without data augmentation) | 91.02%      | -         | -      |
+| Transfer Learning with `google/vit-base-patch16-224` (with data augmentation)  | 91.02%      | -         | -      |
+| Zero-shot Image Classification with `openai/clip-vit-large-patch14`  | 60.97%      | 56.47%    | 60.97%    |
 
 
 ## References 
