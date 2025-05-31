@@ -7,7 +7,7 @@ This project fine-tunes a Vision Transformer to classify Zalando’s Fashion-MNI
 | Name                   | URL                                                                                 |
 |------------------------|-------------------------------------------------------------------------------------|
 | Hugging Face Space     | [Granitagushi/vit-base-fashion demo](https://huggingface.co/spaces/Granitagushi/Clothing_Detector) |
-| Model Page             | [Granitagushi/vit-base-fashion](https://github.com/granitagushi/AI_Project_fashion) |
+| Model Page             | [Granitagushi/vit-base-fashion](https://huggingface.co/Granitagushi/vit-base-fashion) |
 | Code                   | [GitHub Repository](https://github.com/granitagushi/AI_Project_fashion)                                               |
 
 ## Labels
